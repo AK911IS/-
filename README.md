@@ -1,0 +1,2 @@
+# -
+const https = require('https');     https.get(       "&lt;Feed URI>",       { headers: { "x-api-key": '&lt;Api Key>'}       },       (resp) => {         resp.on('data', (chunk) => {           console.log("Receiving Data");         });         resp.on('end', () => {           console.log("Finished receiving data");         });       }).on("error", (err) => {         console.log("Error: " + err.message);       });     
